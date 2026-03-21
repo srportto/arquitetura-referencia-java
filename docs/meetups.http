@@ -1,0 +1,31 @@
+### Get all groups
+GET http://localhost:8080/api/groups
+
+### Get a single group
+GET http://localhost:8080/api/groups/1
+
+### Create a new group
+POST http://localhost:8080/api/groups
+Content-Type: application/json
+
+{
+  "name": "Cleveland Rust Meetup",
+  "description": "Rust developers in CLE",
+  "city": "Cleveland",
+  "organizer": "Jane Doe"
+}
+
+### Update a group
+PUT http://localhost:8080/api/groups/1
+Content-Type: application/json
+
+{
+  "name": "Cleveland Java User Group",
+  "description": "Updated description",
+  "city": "Cleveland",
+  "organizer": "Dan Vega",
+  "createdDate": "2010-03-15"
+}
+
+### Delete a group
+DELETE http://localhost:8080/api/groups/1
