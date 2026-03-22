@@ -1,3 +1,13 @@
 spring:
   application:
     name: meetup
+  datasource:
+    url: jdbc:postgresql://localhost:5432/db-csp-postgres
+    username: docker      
+    password: JTMQ9YxDkHfRQbX2
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
