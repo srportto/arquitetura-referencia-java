@@ -1,0 +1,44 @@
+{
+    // veja mais em: https://code.visualstudio.com/docs/java/java-debugging
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "attach",
+            "hostName": "localhost",
+            "port": "<debug port of the debuggee>"
+        },
+        {
+            "type": "java",
+            "name": "current file",
+            "request": "launch",
+            "mainClass": "com.example.MainApp",
+            "stepFilters": {
+                "skipClasses": [
+                    "$JDK",
+                    "junit.*"
+                ],
+                "skipSynthetics": false,
+                "skipStaticInitializers": false,
+                "skipConstructors": false
+            }
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MeetupApplication<meetup>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "dev.danvega.meetup.MeetupApplication",
+            "env": {
+                "DB_NAME": "db-csp-postgres",
+                "DB_USER_NAME": "docker",
+                "DB_PASSWORD": "JTMQ9YxDkHfRQbX2"
+            },
+            "projectName": "meetup",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

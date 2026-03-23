@@ -54,8 +54,8 @@ build/
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### VS Code ###
-.vscode/
+### VS Code ### -> Comentei abaixo para não ignorar os arquivos de configuração do VS Code, como launch.json e tasks.json, que são importantes para o desenvolvimento.
+##.vscode/
 
 ### draw.io ###
 *.drawio.bkp
